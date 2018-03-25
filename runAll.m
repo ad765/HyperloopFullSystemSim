@@ -5,18 +5,18 @@ clear,clc
 
 % Simulation time
 t0 = 0;
-tf = 3000;
+tf = 1000;
 
 % State initialization
 x0          = 0.005;
 y0          = 0;
 z0          = 0;
-phi0        = 0;
-theta0      = 0;
-psi0        = 0; % in degrees
+phi0        = 0;    % roll
+theta0      = 0;    % pitch
+psi0        = 0.05; % yaw
 u0          = 0;
 v0          = 0;
-w0          = 100;
+w0          = 89;
 phidot0     = 0;
 thetadot0   = 0;
 psidot0     = 0;
@@ -44,7 +44,6 @@ I_MAG4 = 1;
 
 %% Extra parameters
 iBeamThick = 0.313*(0.0254); %meters
-
 
 %% Simulation files
 sim('FullSystemSim.slx')
